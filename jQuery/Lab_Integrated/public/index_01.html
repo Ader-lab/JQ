@@ -153,19 +153,15 @@ $(function () {
         { ymd: "2017-05-04", title: "Item 5" }
     ];
 
-    // ----------------------------------------------------------
-    // 秀資料
+    // 練習與任務:
 
-    function newData(){
-        $.ajax({
-            type:"get",
-            url:"/home/news"
-        }).then(function(e){
-            newsList = JSON.parse(e);
-            refresUI();
-        })
-
-    }
+    $.ajax({
+        type:"get",
+        url:"/home/news"
+    }).then(function(e){
+        newsList = JSON.parse(e);
+        refresUI();
+    })
     
     function refresUI() {
         $("#latestNews").empty();
@@ -179,41 +175,7 @@ $(function () {
         })
 
     } // end of refresUI
-
-    // ----------------------------------------------------------
-    // 新增
-
-    $("#newItem").on("click",function () {
-        $("#newsModal").modal({backdrop: "static"});
-    })
-
-    $("#okButton").on('click',function(){
-        
-        let dataToServer = {
-            title: $('#titleTextBox').val(),
-            ymd: $("#ymdTextBox").val()
-        };
-
-        $.ajax({
-            type:"post",
-            url:"/home/news",
-            data: dataToServer
-        }).then(function(e){
-            newData();
-        })
-
-        $("#newsModal").modal("hide");
-    }) // end of 新增
-
-
-    // ----------------------------------------------------------
-
-
-
-    newData(); // 連db
-
-
-
+    
 
 
 
