@@ -178,6 +178,7 @@ $(function () {
                 .appendTo("#latestNews");
         })
 
+
     } // end of refresUI
 
     // ----------------------------------------------------------
@@ -198,7 +199,7 @@ $(function () {
             type:"post",
             url:"/home/news",
             data: dataToServer
-        }).then(function(e){
+        }).then(function(){
             newData();
         })
 
@@ -210,7 +211,7 @@ $(function () {
 
 
 
-    newData(); // 連db123
+    newData(); // 連db
 
 
 
