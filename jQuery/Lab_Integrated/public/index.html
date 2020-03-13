@@ -191,7 +191,7 @@ $(function () {
             $.ajax({
                 type: "delete",
                 url: "/home/news",
-                data: {newsId: ID}
+                data: {newsId: ID}  // 傳出的資料是物件或是JSON，但如果傳出JSON還要加上dataType: 'json'
             })
             .then(function (e) {
                 newData();
