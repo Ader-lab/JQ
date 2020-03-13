@@ -12,18 +12,67 @@
 </head>
 <body>
 
-	<div>
-		<div>
+	<div data-role="page" id="homePage">
+		<div data-role="header" data-position="fixed">
+			<a href="#homePage" data-role="button" data-icon="home">Home</a>
 			<h1>容易記憶的安全密碼</h1>
+			<a href="#aboutPage" data-role="button" data-icon="info" data-iconpos="notext"></a>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#homePage" data-icon="home">Home</a></li>
+					<li><a href="#testPage" data-icon="star">Test</a></li>
+					<li><a href="#howPage" data-icon="gear">How</a></li>
+					<li><a href="#aboutPage" data-icon="info">About</a></li>
+				</ul>
+			</div>
 		</div>
 
-		<div>
+		<div data-role="content">
 			<h2>密碼的兩難…</h2>
 			<p>好密碼的條件：愈長、愈亂、愈與個人資料無關，並且要經常更換。</p>
 			<p>問題是，這樣子的密碼會不會就愈記不住？</p>
+			<a href="#testPage" data-transition="slide" data-role="button" data-icon="arrow-r" data-iconpos="right" data-inline="true">繼續閱讀...</a>
 		</div>
 
-		<div>
+		<div data-role="footer" data-position="fixed">
+			<h2>by wolfgang.chien@gmail.com</h2>
+		</div>
+	</div>
+
+
+	<div data-role="page" id="testPage">
+		<div data-role="header" data-position="fixed">
+			<a href="#homePage" data-role="button" data-icon="home">Home</a>
+			<h1>容易記憶的安全密碼</h1>
+			<a href="#aboutPage" data-role="button" data-icon="info" data-iconpos="notext"></a>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#homePage" data-icon="home">Home</a></li>
+					<li><a href="#testPage" data-icon="star">Test</a></li>
+					<li><a href="#howPage" data-icon="gear">How</a></li>
+					<li><a href="#aboutPage" data-icon="info">About</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div data-role="content">
+			<div data-role="collapsible-set">
+				<div data-role="collapsible">
+					<h2>記憶力測驗（一）</h2>
+					<p>請仔細觀看並依序記憶下列數字， 時間二十秒：</p>
+					<p>81523-79684-69284-23894</p>
+					<p>時間到，請閉上眼睛並且回憶您記得多少？ 如果沒有受過訓練，一般人通常只能記住六到八個。</p>
+				</div>
+				<div data-role="collapsible">
+					<h2>記憶力測驗（二）</h2>
+					<p>同樣地，請仔細觀看並依序記憶下列數字，時間也是二十秒：</p>
+					<p>800010005000200030007</p>
+					<p>請問您這次記得幾個數字？ 有沒有比上一個測驗進步？</p>
+				</div>
+			</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
 			<h2>by wolfgang.chien@gmail.com</h2>
 		</div>
 	</div>
