@@ -160,6 +160,7 @@ $(function () {
             url:"/home/news"
         }).then(function(e){
             newsList = JSON.parse(e);
+            // console.log(newsList);
             refresUI();
         })
 
@@ -185,10 +186,12 @@ $(function () {
         })
         $('.deleteItem').on("click", function(){
             let i = $(this).closest("li").index();
+            ID = newsList[i].newsId;
+            // console.log(ID);
             $.ajax({
                 type: "delete",
                 url: "/home/news",
-                data: newsList[i]
+                data: {newsId: ID}
             })
             .then(function (e) {
                 newData();
@@ -231,14 +234,15 @@ $(function () {
     function editData(){
         newsList[currentIndex].title = $("#titleTextBox").val();
         newsList[currentIndex].ymd = $("#ymdTextBox").val();
-        refresUI();
         $("#newsModal").modal("hide");
+        // console.log(newsList[currentIndex]);
         $.ajax({
             type:"put",
             url:"/home/news",
             data: newsList[currentIndex]
         }).then(function(e){
-            console.log(e);
+            newData();
+            // console.log(e);
             
         })
     }
