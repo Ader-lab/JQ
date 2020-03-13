@@ -183,17 +183,7 @@ $(function () {
             $('#titleTextBox').val(newsList[i].title);
             $("#ymdTextBox").val(newsList[i].ymd);
         })
-        $('.deleteItem').on("click", function(){
-            let i = $(this).closest("li").index();
-            $.ajax({
-                type: "delete",
-                url: "/home/news",
-                data: newsList[i]
-            })
-            .then(function (e) {
-                newData();
-            })
-        })
+
         
 
     } // end of refresUI
